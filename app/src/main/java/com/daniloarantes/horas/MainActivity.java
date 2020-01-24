@@ -10,5 +10,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Ao realizar modificações nos arquivos, é necessário realizar commit e push para o repositório do GitHub.
     }
 }
