@@ -2,7 +2,10 @@ package com.daniloarantes.horas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,10 +14,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Ao realizar modificações nos arquivos, é necessário realizar commit e push para o repositório do GitHub.
-        
-        // Adicionando comentário pelo GitHub. Para pegar novas atualizações, é necessário realizar o Push. Assim, as modificações serão 
-        // baixadas do github para seu computador, mantendo o projeto sempre atualizado e sincronizado.
+        Button button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Activity_EntradaSaida.class);
+                startActivity(intent);
+            }
+        });
+
    
     }
 }
